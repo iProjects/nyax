@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nyax", "nyax\nyax.csproj", "{19148B77-ABF4-4925-AA0D-91B7685B2698}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nthareneapi", "nthareneapi\nthareneapi.csproj", "{19190525-DC36-450A-8B78-61F36EFBFB49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMOScripting", "SMOScripting\SMOScripting.csproj", "{76D44E42-1A30-45FB-881E-C4CBA7E3298D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19148B77-ABF4-4925-AA0D-91B7685B2698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19148B77-ABF4-4925-AA0D-91B7685B2698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19148B77-ABF4-4925-AA0D-91B7685B2698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19148B77-ABF4-4925-AA0D-91B7685B2698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19190525-DC36-450A-8B78-61F36EFBFB49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19190525-DC36-450A-8B78-61F36EFBFB49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19190525-DC36-450A-8B78-61F36EFBFB49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19190525-DC36-450A-8B78-61F36EFBFB49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76D44E42-1A30-45FB-881E-C4CBA7E3298D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76D44E42-1A30-45FB-881E-C4CBA7E3298D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76D44E42-1A30-45FB-881E-C4CBA7E3298D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76D44E42-1A30-45FB-881E-C4CBA7E3298D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

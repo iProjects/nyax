@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{19148B77-ABF4-4925-AA0D-91B7685B2698}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>nyax</RootNamespace>
+    <AssemblyName>nyax</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <StartupObject>nyax.Program</StartupObject>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\USER\AppData\Roaming\ICSharpCode/SharpDevelop4\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <ApplicationIcon>resources\launcher.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <StartAction>Project</StartAction>
+    <StartProgram>..\nyaxconsole\bin\Debug\nyaxconsole.exe</StartProgram>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SqlServer.Smo" />
+    <Reference Include="MySql.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>dll\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="nthareneapp">
+      <HintPath>bin\Debug\nthareneapp.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>dll\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aboutform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aboutform.Designer.cs">
+      <DependentUpon>aboutform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="background_worker_singleton.cs" />
+    <Compile Include="categorieslistform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="categorieslistform.Designer.cs">
+      <DependentUpon>categorieslistform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="createcategoryform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createcategoryform.Designer.cs">
+      <DependentUpon>createcategoryform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="createcropform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createcropform.Designer.cs">
+      <DependentUpon>createcropform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="createcropdiseaseform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createcropdiseaseform.Designer.cs">
+      <DependentUpon>createcropdiseaseform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="createcropvarietyform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createcropvarietyform.Designer.cs">
+      <DependentUpon>createcropvarietyform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="databaseutilsform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="databaseutilsform.Designer.cs">
+      <DependentUpon>databaseutilsform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="createmanufacturerform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createmanufacturerform.Designer.cs">
+      <DependentUpon>createmanufacturerform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="createpestinsecticideform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createpestinsecticideform.Designer.cs">
+      <DependentUpon>createpestinsecticideform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="createsettingform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createsettingform.Designer.cs">
+      <DependentUpon>createsettingform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cropdiseaseslistform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cropdiseaseslistform.Designer.cs">
+      <DependentUpon>cropdiseaseslistform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cropslistform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cropslistform.Designer.cs">
+      <DependentUpon>cropslistform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datastoreutilzsingleton.cs" />
+    <Compile Include="editcategoryform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editcategoryform.Designer.cs">
+      <DependentUpon>editcategoryform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editcropdiseaseform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editcropdiseaseform.Designer.cs">
+      <DependentUpon>editcropdiseaseform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editcropform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editcropform.Designer.cs">
+      <DependentUpon>editcropform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editcropvarietyform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editcropvarietyform.Designer.cs">
+      <DependentUpon>editcropvarietyform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editmanufacturerform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editmanufacturerform.Designer.cs">
+      <DependentUpon>editmanufacturerform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editpestinsecticideform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editpestinsecticideform.Designer.cs">
+      <DependentUpon>editpestinsecticideform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editsettingform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editsettingform.Designer.cs">
+      <DependentUpon>editsettingform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="helpform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="helpform.Designer.cs">
+      <DependentUpon>helpform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manufacturerslistform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manufacturerslistform.Designer.cs">
+      <DependentUpon>manufacturerslistform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="msgboxform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="msgboxform.Designer.cs">
+      <DependentUpon>msgboxform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pestsinsecticideslistform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pestsinsecticideslistform.Designer.cs">
+      <DependentUpon>pestsinsecticideslistform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="searchform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchform.Designer.cs">
+      <DependentUpon>searchform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="settingslistform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="settingslistform.Designer.cs">
+      <DependentUpon>settingslistform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cropsvarietieslistform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cropsvarietieslistform.Designer.cs">
+      <DependentUpon>cropsvarietieslistform.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="aboutform.resx">
+      <DependentUpon>aboutform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="categorieslistform.resx">
+      <DependentUpon>categorieslistform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createcategoryform.resx">
+      <DependentUpon>createcategoryform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createcropdiseaseform.resx">
+      <DependentUpon>createcropdiseaseform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createcropform.resx">
+      <DependentUpon>createcropform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createcropvarietyform.resx">
+      <DependentUpon>createcropvarietyform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cropsvarietieslistform.resx">
+      <DependentUpon>cropsvarietieslistform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="databaseutilsform.resx">
+      <DependentUpon>databaseutilsform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createmanufacturerform.resx">
+      <DependentUpon>createmanufacturerform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createpestinsecticideform.resx">
+      <DependentUpon>createpestinsecticideform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createsettingform.resx">
+      <DependentUpon>createsettingform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cropdiseaseslistform.resx">
+      <DependentUpon>cropdiseaseslistform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cropslistform.resx">
+      <DependentUpon>cropslistform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editcategoryform.resx">
+      <DependentUpon>editcategoryform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editcropdiseaseform.resx">
+      <DependentUpon>editcropdiseaseform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editcropform.resx">
+      <DependentUpon>editcropform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editcropvarietyform.resx">
+      <DependentUpon>editcropvarietyform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editmanufacturerform.resx">
+      <DependentUpon>editmanufacturerform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editpestinsecticideform.resx">
+      <DependentUpon>editpestinsecticideform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editsettingform.resx">
+      <DependentUpon>editsettingform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="helpform.resx">
+      <DependentUpon>helpform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manufacturerslistform.resx">
+      <DependentUpon>manufacturerslistform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="msgboxform.resx">
+      <DependentUpon>msgboxform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pestsinsecticideslistform.resx">
+      <DependentUpon>pestsinsecticideslistform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchform.resx">
+      <DependentUpon>searchform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="settingslistform.resx">
+      <DependentUpon>settingslistform.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pdf\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="dll\Npgsql.dll" />
+    <None Include="dll\System.Data.SQLite.dll" />
+    <None Include="dll\System.Data.SQLite.xml" />
+    <None Include="resources\doc.ico" />
+    <None Include="resources\error.ico" />
+    <None Include="resources\gopher.ico" />
+    <None Include="resources\launcher.ico" />
+    <None Include="resources\logo.png" />
+    <None Include="resources\package.ico" />
+    <None Include="resources\pest.ico" />
+    <None Include="resources\ProductIcon.ico" />
+    <None Include="resources\python.ico" />
+    <None Include="resources\Thumbs.db" />
+    <None Include="resources\winico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\nthareneapi\nthareneapi.csproj">
+      <Project>{19190525-DC36-450A-8B78-61F36EFBFB49}</Project>
+      <Name>nthareneapi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMOScripting\SMOScripting.csproj">
+      <Project>{76D44E42-1A30-45FB-881E-C4CBA7E3298D}</Project>
+      <Name>SMOScripting</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
